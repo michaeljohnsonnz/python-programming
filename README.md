@@ -63,6 +63,20 @@ sudo apt install python3.10-venv
 
 ```
 
+## Note
+
+If settings stops loading then check `gnome-control-center`
+
+```bash
+# Start gnome-control-center
+gnome-control-center
+
+Command 'gnome-control-center' not found, but can be installed with:
+
+# Install gnome-control-center
+sudo apt install gnome-control-center
+```
+
 ## Links
 
 The following website helped me resolve the issues I experienced with installing python3.10 on Ubuntu 20.04 LTS
