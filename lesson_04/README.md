@@ -1,4 +1,6 @@
-# Lab overview
+# List Data Type
+
+## Lab overview
 
 In Python, string and numeric data types are often used in groups called collections. Three such collections that Python supports are the list, the tuple, and the dictionary.
 
