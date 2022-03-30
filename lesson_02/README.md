@@ -1,4 +1,6 @@
-# Lab overview
+# Working with Numeric Data Types
+
+## Lab overview
 
 Python makes it easier to do math. In fact, Python is a popular language among data scientists, who must analyze large amounts of data. In this lab, you will explore the basic data types that are used to store numeric values.
 
