@@ -1,4 +1,6 @@
-# Lab overview
+# Working with the String Data Type
+
+## Lab overview
 
 In Python, a collection of letters and symbols is called a string. Strings are used often in Python for input and output.
 
