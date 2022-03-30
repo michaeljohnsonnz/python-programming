@@ -2,7 +2,7 @@
 
 This is a repository for all the lessons in our python programming course. 
 
-- [Python Programming](#python-programming)
+- [Python Programming](#python-programming) <!-- omit in toc -->
 - [Install Python 3.10.4 with APT Package Manager](#install-python-3104-with-apt-package-manager)
   - [Install](#install)
     - [1. Add repository](#1-add-repository)
