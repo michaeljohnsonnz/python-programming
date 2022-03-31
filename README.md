@@ -173,9 +173,62 @@ sudo make altinstall
 
 Python 3.10 is installed in `/usr/local/bin` so it's clearly separated from the default version installed in `/usr/bin` directory. I have to use `python3.10` command when running python scripts etc. At least my system and programs are not misbehaving anymore.
 
+### Issues installing pip modules
+
+I experienced a lot of errors trying to installing modules or packages. I believe this has something to do with the path and conflicts with core Ubuntu components. Too much to research and not enough time to do it.
+
 ### Conclusion
 
-It's working but I would also like to try `pyenv` when I get a chance.
+It's working but unable to install modules or packages so I'm going to try `pyenv` when I get a chance.
+
+# Install Python 3.10.4 on Ubuntu using pyenv
+
+1. Using git, clone pyenv
+
+```bash
+ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+ ```
+
+2. Change into .pyenv directory and make source
+
+```bash
+ cd ~/.pyenv && src/configure && make -C src
+ ```
+
+3. Configure shell environment
+
+```bash
+# the sed invocation inserts the lines at the start of the file
+# after any initial comment lines
+sed -Ei -e '/^([^#]|$)/ {a \
+export PYENV_ROOT="$HOME/.pyenv"
+a \
+export PATH="$PYENV_ROOT/bin:$PATH"
+a \
+' -e ':a' -e '$!{n;ba};}' ~/.profile
+echo 'eval "$(pyenv init --path)"' >>~/.profile
+
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+```
+Note: Logout of your system and log back in for changes to take effect
+
+4. Install python build dependencies
+
+```bash
+sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+5. Install the python version(s) you would like to use.
+
+```bash
+pyenv install 3.10.4
+```
+
+### Conclusion
+
+This was the simplest way to install python on Ubuntu and also resolved all issues I had with the other methods.
 
 
 # Links
@@ -183,6 +236,7 @@ It's working but I would also like to try `pyenv` when I get a chance.
 The following website helped me resolve the issues I experienced with installing `Python 3.10.4` on `Ubuntu 20.04 LTS`
 
 - https://cloudbytes.dev/snippets/upgrade-python-to-latest-version-on-ubuntu-linux
+- https://github.com/pyenv/pyenv
 
 # Author
 
