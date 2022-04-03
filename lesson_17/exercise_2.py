@@ -1,4 +1,4 @@
-# Module Lab: Caesar Cipher Program Bug #1
+# Module Lab: Caesar Cipher Program Bug #2
 #
 # In a previous lab, you created a Caesar cipher program. This version of
 # the program is buggy. Use a debugger to find the bug and fix it.
