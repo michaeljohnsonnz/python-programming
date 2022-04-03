@@ -1,6 +1,8 @@
 # Python Programming
 
-This is a repository for all the lessons in our python programming course. 
+This is a repository for all the lessons in our python programming course. I seem to be the only one in the class running on Ubuntu but I ran into quite a few problems each time I installed python on my system. I fell behind in class and I wasn't able to perform the same tasks as everyone else.
+
+I decided to document my journey and include it here so any future students or tutors will understand the problem and how I resolved it. 
 
 - [Python Programming](#python-programming) <!-- omit in toc -->
 - [Install Python 3.10.4 with APT Package Manager](#install-python-3104-with-apt-package-manager)
