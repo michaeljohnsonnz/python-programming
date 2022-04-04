@@ -4,7 +4,6 @@ This is a repository for all the lessons in our python programming course. I see
 
 I decided to document my journey and include it here so any future students or tutors will understand the problem and how I resolved it. 
 
-- [Python Programming](#python-programming) <!-- omit in toc -->
 - [Install Python 3.10.4 with APT Package Manager](#install-python-3104-with-apt-package-manager)
   - [Install](#install)
     - [1. Add repository](#1-add-repository)
@@ -31,8 +30,8 @@ I decided to document my journey and include it here so any future students or t
 
 Install the latest version of `Python 3.10.4` on `Ubuntu 20.04 LTS`. 
 
-- [ ] `Ubuntu 20.04 LTS` 
-- [ ] `Python 3.10.4`
+- `Ubuntu 20.04 LTS` 
+- `Python 3.10.4`
 
 ## Install
 
@@ -177,11 +176,11 @@ Python 3.10 is installed in `/usr/local/bin` so it's clearly separated from the 
 
 ### Issues installing pip modules
 
-I experienced a lot of errors trying to installing modules or packages. I believe this has something to do with the path and conflicts with core Ubuntu components. Too much to research and not enough time to do it.
+I experienced a lot of errors trying to install modules or packages. I believe this has something to do with the path and conflicts with core Ubuntu components. Too much to research and not enough time to do it.
 
 ### Conclusion
 
-It's working but unable to install modules or packages so I'm going to try `pyenv` when I get a chance.
+It's working but unable to install modules or packages so I'm going to try `pyenv` next.
 
 # Install Python 3.10.4 on Ubuntu using pyenv
 
