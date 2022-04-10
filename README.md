@@ -196,20 +196,12 @@ It's working but unable to install modules or packages so I'm going to try `pyen
  cd ~/.pyenv && src/configure && make -C src
  ```
 
-3. Configure shell environment
+3. Configure shell environment `~/.bashrc
 
 ```bash
-# the sed invocation inserts the lines at the start of the file
-# after any initial comment lines
-sed -Ei -e '/^([^#]|$)/ {a \
 export PYENV_ROOT="$HOME/.pyenv"
-a \
 export PATH="$PYENV_ROOT/bin:$PATH"
-a \
-' -e ':a' -e '$!{n;ba};}' ~/.profile
-echo 'eval "$(pyenv init --path)"' >>~/.profile
-
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+eval "$(pyenv init --path)"
 ```
 Note: Logout of your system and log back in for changes to take effect
 
