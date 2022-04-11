@@ -4,6 +4,7 @@ This is a repository for all the lessons in our python programming course. I see
 
 I decided to document my journey and include it here so any future students or tutors will understand the problem and how I resolved it. 
 
+- [Python Programming](#python-programming)
 - [Install Python 3.10.4 with APT Package Manager](#install-python-3104-with-apt-package-manager)
   - [Install](#install)
     - [1. Add repository](#1-add-repository)
@@ -22,7 +23,10 @@ I decided to document my journey and include it here so any future students or t
     - [3. Build from source](#3-build-from-source)
   - [Issues](#issues-1)
     - [Full command required](#full-command-required)
+    - [Issues installing pip modules](#issues-installing-pip-modules)
     - [Conclusion](#conclusion-1)
+- [Install Python 3.10.4 on Ubuntu using pyenv](#install-python-3104-on-ubuntu-using-pyenv)
+    - [Conclusion](#conclusion-2)
 - [Links](#links)
 - [Author](#author)
 
@@ -184,19 +188,27 @@ It's working but unable to install modules or packages so I'm going to try `pyen
 
 # Install Python 3.10.4 on Ubuntu using pyenv
 
-1. Using git, clone pyenv
+1. Install python build dependencies
+
+```bash
+sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+2. Using git, clone pyenv
 
 ```bash
  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
  ```
 
-2. Change into .pyenv directory and make source
+3. Change into .pyenv directory and make source
 
 ```bash
  cd ~/.pyenv && src/configure && make -C src
  ```
 
-3. Configure shell environment `~/.bashrc
+4. Configure shell environment `~/.bashrc
 
 ```bash
 export PYENV_ROOT="$HOME/.pyenv"
@@ -204,14 +216,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 ```
 Note: Logout of your system and log back in for changes to take effect
-
-4. Install python build dependencies
-
-```bash
-sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
-libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-```
 
 5. Install the python version(s) you would like to use.
 
